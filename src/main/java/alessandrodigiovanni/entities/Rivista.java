@@ -2,13 +2,14 @@ package alessandrodigiovanni.entities;
 
 import alessandrodigiovanni.enums.Periodicità;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Table;
 
 @Entity
 
 public class Rivista extends Catalogo {
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Periodicità periodicità;
 
     public Rivista(){}

@@ -28,12 +28,12 @@ public class Application {
         Libro libro2=new Libro("Lord of the Ring",2000,1200,"Tolkien",Genere.FANTASY);
         Libro libro1= new Libro("Piccolo Principe",1943,300,"Antoine de Saint-Exupéry", Genere.FANTASY);
         Libro libro3= new Libro("IO",1967,490,"Giorgione",Genere.BIOGRAFIA);
-        /*cd.save(rivista2);
+        cd.save(rivista2);
         cd.save(rivista3);
         cd.save(libro2);
         cd.save(libro3);
         cd.save(rivista1);
-        cd.save(libro1);*/
+        cd.save(libro1);
 
         cd.findElementByTitleStartingWith("Lo").forEach(System.out::println);
         cd.findsByDate(2025).forEach(System.out::println);
@@ -44,14 +44,14 @@ public class Application {
 
         LocalDate date=LocalDate.of(2025,07,04);
         Utente gianni= new Utente("Gianni","Paperone",date.minusYears(60),1234);
-        /*ud.save(gianni);*/
+        ud.save(gianni);
         Utente pino= new Utente("Pino","Pinotti",date.minusYears(25).minusDays(12),5463);
-        /*ud.save(pino);*/
+        ud.save(pino);
 
         LocalDate inizioPrestito= LocalDate.now();
         LocalDate finePrestito= inizioPrestito.plusDays(30);
         Prestito prestito1= new Prestito(pino,rivista3,inizioPrestito,finePrestito,inizioPrestito.plusDays(13));
-        /*pd.save(prestito1);*/
+        pd.save(prestito1);
         pd.findsByNumCard(5463).forEach(System.out::println);
 
 

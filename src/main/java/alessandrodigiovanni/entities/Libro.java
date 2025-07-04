@@ -2,6 +2,7 @@ package alessandrodigiovanni.entities;
 
 import alessandrodigiovanni.enums.Genere;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 
 
@@ -9,7 +10,7 @@ import jakarta.persistence.Enumerated;
 
 public class Libro extends Catalogo {
     private String autore;
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private Genere genere;
 
     public Libro(){}
